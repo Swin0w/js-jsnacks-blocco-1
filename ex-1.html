@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #main {
+        height: 100vh;
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+      }
+      #content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 400px;
+        height: 400px;
+        padding: 20px;
+        border: 2px solid yellow;
+      }
+      #content p {
+        text-align: center;
+        color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div id="content">
+        <p>Generatore di "nomi cognomi" casuali: prendendo una
+        lista di nomi e una lista di cognomi, Gatsby vuole
+        generare una falsa lista di invitati.
+        </p>
+      </div>
+    </div>
+    <script type="text/javascript">
+    /*Generatore di "nomi cognomi" casuali: prendendo una
+    lista di nomi e una lista di cognomi, Gatsby vuole
+    generare una falsa lista di invitati.
+    */
+    var names = ["Giuseppe", "Osvaldo", "Rodolfo"];
+    var surnames = ["Caruso", "Giordano", "Hunger"];
+    var fullnames = [];
+
+    for (var i=0; i < 3; i++){
+      var nameRnd = names[Math.floor(Math.random() * names.length)];
+      var surnameRnd = surnames[Math.floor(Math.random() * surnames.length)];
+      // if ((nameRnd == names[1]) || (surnameRnd == surnames[1])) {
+      //   nameRnd = names[1 + 1];
+      //   surnameRnd = surnames[1 + 2];
+      // }
+      // if ((nameRnd == names[3]) || (surnameRnd == surnames[3])){
+      //   nameRnd = names[3 - 1];
+      //   surnameRnd = surnames[3 - 1];
+      // }
+      // if ((nameRnd == names[2]) || (surnameRnd == surnames[2])) {
+      //   nameRnd == names[2 - 1];
+      //   surnameRnd = surnames[2 - 1];
+      // }
+      fullnames.push(nameRnd + " " + surnameRnd);
+    }
+    console.log(fullnames);
+
+    </script>
+  </body>
+</html>
